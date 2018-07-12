@@ -17,7 +17,7 @@ namespace EWSAPI.Controllers
         public string Get()
         {
 
-            return"value";
+            return"value 1";
         }
 
         // GET: api/EWSAPI/5
