@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  ewsapi:
+    image: ${DOCKER_REGISTRY}ewsapi
+    build:
+      context: .
+      dockerfile: EWSAPI/Dockerfile
