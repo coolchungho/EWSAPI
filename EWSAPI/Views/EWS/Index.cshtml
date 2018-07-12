@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Early Warning Score</h2>
+
+@using (Html.BeginForm())
+{
+    <h4>RR:</h4>
+    <input type="text" name="RR" />
+    <h4>OxySat:</h4>
+    <input type="text" name="Oxysat" />
+    <h4>SuppOxy:</h4>
+    <input type="radio" name="SuppOxy" value="true">
+    <label for="SuppOxy">true</label>
+    <input type="radio" name="SuppOxy" value="false" />
+    <label for="SuppOxy">false</label>
+    <h4>Temp:</h4>
+    <input type="text" name="Temp" />
+    <h4>SysBP:</h4>
+    <input type="text" name="SysBP" />
+    <h4>HR:</h4>
+    <input type="text" name="HR" />
+    <h4>AVPU:</h4>
+    <input type="radio" name="AVPU" value="A" />
+    <label for="AVPU">A</label>
+    <input type="radio" name="AVPU" value="V" />
+    <label for="AVPU">V</label>
+    <input type="radio" name="AVPU" value="P" />
+    <label for="AVPU">P</label>
+    <input type="radio" name="AVPU" value="U" />
+    <label for="AVPU">U</label><br />
+    <input type="submit" value="送出" />
+}
+
+<h3>RR= @ViewBag.RR,  RR Score = @ViewBag.Rr_score</h3>
+
+<h3> OxySat = @ViewBag.Oxysat, OxySat Score = @ViewBag.OxySat_score</h3>
+
+<h3> SuppOxy Score = @ViewBag.SuppOxy</h3>
+
+<h3> Temp=@ViewBag.Temp,  Temp Score = @ViewBag.Temp_score</h3>
+
+<h3> SysBP= @ViewBag.SysBP, SysBP Score = @ViewBag.SysBP_score</h3>
+
+<h3> HR=@ViewBag.HR, HR Score = @ViewBag.HR_score</h3>
+
+<h3> AVPU= @ViewBag.AVPU, AVPU Score = @ViewBag.AVPU_score</h3>
+
+<h3> EWS = @ViewBag.ews,  @ViewBag.ews_risk</h3>
+
