@@ -12,6 +12,12 @@ namespace EWSAPI.Controllers
     [ApiController]
     public class EWSAPIController : ControllerBase
     {
+        /// <summary>
+        /// 查詢Early Warning Score 分數
+        /// </summary>
+        /// <param name="q">查詢使用者名稱</param>
+        /// <returns>Earning Warning Score</returns>
+
         // GET: api/EWSAPI
         [HttpGet]
         public string Get()
@@ -28,6 +34,12 @@ namespace EWSAPI.Controllers
             return "value";
         }
 
+
+        /// <summary>
+        /// 計算Early Warning Score 分數
+        /// </summary>
+        /// 
+        
         // POST: api/EWSAPI
         [HttpPost]
         public EWSAPIResultModel Post([FromBody] EWSModel ewsmodel)
